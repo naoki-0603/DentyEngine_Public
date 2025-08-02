@@ -1,0 +1,9 @@
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\bin\Release\ScriptApp.dll
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\bin\Release\ScriptApp.pdb
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\bin\Release\ScriptCore.dll
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\bin\Release\ScriptCore.pdb
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\obj\Release\ScriptApp.csproj.AssemblyReference.cache
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\obj\Release\ScriptApp.csproj.CoreCompileInputs.cache
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\obj\Release\ScriptApp.csproj.Up2Date
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\obj\Release\ScriptApp.dll
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\obj\Release\ScriptApp.pdb

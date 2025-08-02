@@ -1,0 +1,5 @@
+https://github.com/jaxry/panorama-to-cubemap (LGPL-v3.0)
+paranoma to cubemap (.png)
+
+Microsoft SDK
+dxtex.exe cubemap(png) to dds(cubemap)

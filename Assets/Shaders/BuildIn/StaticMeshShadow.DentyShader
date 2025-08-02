@@ -1,0 +1,50 @@
+{
+    "value0": {
+        "polymorphic_id": 1073741824,
+        "ptr_wrapper": {
+            "id": 2147483649,
+            "data": {
+                "cereal_class_version": 1,
+                "value0": {
+                    "cereal_class_version": 1,
+                    "_name": {
+                        "cereal_class_version": 1,
+                        "_string": "StaticMeshShadow"
+                    },
+                    "_uuid": {
+                        "cereal_class_version": 1,
+                        "_uuid": 11664969248402573611
+                    }
+                },
+                "value1": {
+                    "cereal_class_version": 1,
+                    "_previewImageFilePath": {
+                        "cereal_class_version": 1,
+                        "path": ""
+                    },
+                    "_filePath": {
+                        "path": ""
+                    },
+                    "_filePathToSerialized": {
+                        "path": "Assets\\Shaders\\BuildIn\\StaticMeshShadow.DentyShader"
+                    }
+                },
+                "_id": {
+                    "cereal_class_version": 1,
+                    "_shaderID": 1799302827895858725
+                },
+                "_pathHolder": {
+                    "cereal_class_version": 1,
+                    "vertexShaderFilePath": "DentyEngine/src/HLSL/3D/Mesh/Lighting/Shadow/StaticMeshShadowVS.hlsl",
+                    "hullShaderFilePath": "",
+                    "domainShaderFilePath": "",
+                    "geometryShaderFilePath": "",
+                    "pixelShaderFilePath": "DentyEngine/src/HLSL/3D/Mesh/Lighting/Shadow/MeshShadowPS.hlsl",
+                    "computeShaderFilePaths": []
+                },
+                "_inputLayoutType": 5,
+                "_constantBufferSize": 80
+            }
+        }
+    }
+}

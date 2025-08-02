@@ -1,0 +1,50 @@
+{
+    "value0": {
+        "polymorphic_id": 1073741824,
+        "ptr_wrapper": {
+            "id": 2147483649,
+            "data": {
+                "cereal_class_version": 1,
+                "value0": {
+                    "cereal_class_version": 1,
+                    "_name": {
+                        "cereal_class_version": 1,
+                        "_string": "Sprite3D"
+                    },
+                    "_uuid": {
+                        "cereal_class_version": 1,
+                        "_uuid": 14613645783398929581
+                    }
+                },
+                "value1": {
+                    "cereal_class_version": 1,
+                    "_previewImageFilePath": {
+                        "cereal_class_version": 1,
+                        "path": ""
+                    },
+                    "_filePath": {
+                        "path": ""
+                    },
+                    "_filePathToSerialized": {
+                        "path": "Assets\\Shaders\\BuildIn\\Sprite3D.DentyShader"
+                    }
+                },
+                "_id": {
+                    "cereal_class_version": 1,
+                    "_shaderID": 17699511210517465480
+                },
+                "_pathHolder": {
+                    "cereal_class_version": 1,
+                    "vertexShaderFilePath": "DentyEngine/src/HLSL/2D/Sprite3DVS.hlsl",
+                    "hullShaderFilePath": "",
+                    "domainShaderFilePath": "",
+                    "geometryShaderFilePath": "",
+                    "pixelShaderFilePath": "DentyEngine/src/HLSL/2D/Sprite3DPS.hlsl",
+                    "computeShaderFilePaths": []
+                },
+                "_inputLayoutType": 4,
+                "_constantBufferSize": 96
+            }
+        }
+    }
+}

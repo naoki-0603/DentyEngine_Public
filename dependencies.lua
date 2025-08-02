@@ -1,0 +1,53 @@
+IncludeDir = { }
+IncludeDir["vendor"] = "%{wks.location}/DentyEngine/Vendor/"
+IncludeDir["assimp"] = "%{wks.location}/DentyEngine/Vendor/assimp/include/"
+IncludeDir["bullet3"] = "%{wks.location}/DentyEngine/Vendor/bullet3/include/"
+IncludeDir["bullet3_internal"] = "%{wks.location}/DentyEngine/Vendor/bullet3/include/bullet/"
+IncludeDir["cereal"] = "%{wks.location}/DentyEngine/Vendor/cereal/include/"
+IncludeDir["directxtk"] = "%{wks.location}/DentyEngine/Vendor/directxtk/include/"
+IncludeDir["filewatch"] = "%{wks.location}/DentyEngine/Vendor/filewatch/"
+IncludeDir["imgui"] = "%{wks.location}/DentyEngine/Vendor/imgui/"
+IncludeDir["imguizmo"] = "%{wks.location}/DentyEngine/Vendor/imguizmo/"
+IncludeDir["mono"] = "%{wks.location}/DentyEngine/Vendor/mono/"
+IncludeDir["nameof"] = "%{wks.location}/DentyEngine/Vendor/nameof/"
+IncludeDir["plog"] = "%{wks.location}/DentyEngine/Vendor/plog/include/"
+IncludeDir["stb"] = "%{wks.location}/DentyEngine/Vendor/stb/"
+
+LibraryDir = { }
+LibraryDir["assimp_debug"] = "%{wks.location}/DentyEngine/Vendor/assimp/lib/Debug/"
+LibraryDir["assimp_release"] = "%{wks.location}/DentyEngine/Vendor/assimp/lib/Release/"
+LibraryDir["bullet3_debug"] = "%{wks.location}/DentyEngine/Vendor/bullet3/lib/Debug/"
+LibraryDir["bullet3_release"] = "%{wks.location}/DentyEngine/Vendor/bullet3/lib/Release/"
+LibraryDir["directxtk_debug"] = "%{wks.location}/DentyEngine/Vendor/directxtk/lib/Debug/"
+LibraryDir["directxtk_release"] = "%{wks.location}/DentyEngine/Vendor/directxtk/lib/Release/"
+LibraryDir["mono_debug"] = "%{wks.location}/DentyEngine/Vendor/mono/lib/Debug/"
+LibraryDir["mono_release"] = "%{wks.location}/DentyEngine/Vendor/mono/lib/Release/"
+
+Library = {}
+Library["assimp_debug"] = "assimp-vc143-mtd.lib"
+Library["assimp_release"] = "assimp-vc143-mt.lib"
+Library["bullet3_common_debug"] = "Bullet3Common_Debug.lib"
+Library["bullet3_collision_debug"] = "BulletCollision_Debug.lib"
+Library["bullet3_dynamics_debug"] = "BulletDynamics_Debug.lib"
+Library["bullet3_inverse_dynamics_debug"] = "BulletInverseDynamics_Debug.lib"
+Library["bullet3_softbody_debug"] = "BulletSoftBody_Debug.lib"
+Library["bullet3_linear_math_debug"] = "LinearMath_Debug.lib"
+Library["bullet3_common_release"] = "Bullet3Common.lib"
+Library["bullet3_collision_release"] = "BulletCollision.lib"
+Library["bullet3_dynamics_release"] = "BulletDynamics.lib"
+Library["bullet3_inverse_dynamics_release"] = "BulletInverseDynamics.lib"
+Library["bullet3_softbody_release"] = "BulletSoftBody.lib"
+Library["bullet3_linear_math_release"] = "LinearMath.lib"
+Library["directxtk"] = "DirectXTK.lib"
+Library["mono_libmono_static_sgen"] = "libmono-static-sgen.lib"
+
+-- graphics api
+Library["d3d11"] = "d3d11.lib"
+Library["dxgi"] = "dxgi.lib"
+
+-- windows
+Library["winsock"] = "Ws2_32.lib"
+Library["winmm"] = "Winmm.lib"
+Library["win_version"] = "Version.lib"
+Library["bcrypt"] = "Bcrypt.lib"
+Library["xinput"] = "Xinput.lib"

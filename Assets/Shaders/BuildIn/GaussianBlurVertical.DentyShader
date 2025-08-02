@@ -1,0 +1,50 @@
+{
+    "value0": {
+        "polymorphic_id": 1073741824,
+        "ptr_wrapper": {
+            "id": 2147483649,
+            "data": {
+                "cereal_class_version": 1,
+                "value0": {
+                    "cereal_class_version": 1,
+                    "_name": {
+                        "cereal_class_version": 1,
+                        "_string": "GaussianBlurVertical"
+                    },
+                    "_uuid": {
+                        "cereal_class_version": 1,
+                        "_uuid": 1791765016181687769
+                    }
+                },
+                "value1": {
+                    "cereal_class_version": 1,
+                    "_previewImageFilePath": {
+                        "cereal_class_version": 1,
+                        "path": ""
+                    },
+                    "_filePath": {
+                        "path": ""
+                    },
+                    "_filePathToSerialized": {
+                        "path": "Assets\\Shaders\\BuildIn\\GaussianBlurVertical.DentyShader"
+                    }
+                },
+                "_id": {
+                    "cereal_class_version": 1,
+                    "_shaderID": 15190115743869452442
+                },
+                "_pathHolder": {
+                    "cereal_class_version": 1,
+                    "vertexShaderFilePath": "DentyEngine/src/HLSL/PostEffect/FullScreenQuadVS.hlsl",
+                    "hullShaderFilePath": "",
+                    "domainShaderFilePath": "",
+                    "geometryShaderFilePath": "",
+                    "pixelShaderFilePath": "DentyEngine/src/HLSL/PostEffect/GaussianBlur/GaussianBlurVerticalPS.hlsl",
+                    "computeShaderFilePaths": []
+                },
+                "_inputLayoutType": -1,
+                "_constantBufferSize": 32
+            }
+        }
+    }
+}

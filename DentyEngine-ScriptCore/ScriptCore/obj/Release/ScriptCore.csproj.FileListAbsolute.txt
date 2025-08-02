@@ -1,0 +1,6 @@
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptCore\ScriptCore\bin\Release\ScriptCore.dll
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptCore\ScriptCore\bin\Release\ScriptCore.pdb
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptCore\ScriptCore\obj\Release\ScriptCore.csproj.AssemblyReference.cache
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptCore\ScriptCore\obj\Release\ScriptCore.csproj.CoreCompileInputs.cache
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptCore\ScriptCore\obj\Release\ScriptCore.dll
+D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptCore\ScriptCore\obj\Release\ScriptCore.pdb

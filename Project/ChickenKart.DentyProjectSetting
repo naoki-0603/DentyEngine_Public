@@ -1,0 +1,30 @@
+{
+    "value0": {
+        "polymorphic_id": 1073741824,
+        "ptr_wrapper": {
+            "id": 2147483649,
+            "data": {
+                "cereal_class_version": 1,
+                "value0": {
+                    "cereal_class_version": 1,
+                    "name": "ProjectSetting",
+                    "_filePathToSerialized": {
+                        "cereal_class_version": 1,
+                        "path": "Project\\ChickenKart.ProjectSetting"
+                    }
+                },
+                "runtimeSceneChange": {
+                    "cereal_class_version": 1,
+                    "scenes": [
+                        {
+                            "key": "Crystal_Game",
+                            "value": {
+                                "path": "Assets\\Scenes\\Crystal_Game.DentyScene"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

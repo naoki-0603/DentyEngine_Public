@@ -1,0 +1,79 @@
+{
+    "value0": {
+        "polymorphic_id": 1073741824,
+        "ptr_wrapper": {
+            "id": 2147483649,
+            "data": {
+                "cereal_class_version": 1,
+                "value0": {
+                    "cereal_class_version": 1,
+                    "value0": {
+                        "cereal_class_version": 1,
+                        "_name": {
+                            "cereal_class_version": 1,
+                            "_string": "Logo (カスタム)"
+                        },
+                        "_uuid": {
+                            "cereal_class_version": 1,
+                            "_uuid": 3354485508116577118
+                        }
+                    },
+                    "value1": {
+                        "cereal_class_version": 1,
+                        "_previewImageFilePath": {
+                            "cereal_class_version": 1,
+                            "path": ""
+                        },
+                        "_filePath": {
+                            "path": "Assets\\Logo\\Logo (カスタム).jpeg"
+                        },
+                        "_filePathToSerialized": {
+                            "path": "Assets\\Logo\\Logo (カスタム)_DentyTexture.Json"
+                        }
+                    },
+                    "_format": 28,
+                    "_textureID": {
+                        "cereal_class_version": 1,
+                        "_textureID": 4866304904348119643
+                    },
+                    "_type": 0,
+                    "_alias": "",
+                    "_size": {
+                        "cereal_class_version": 1,
+                        "value0": {
+                            "cereal_class_version": 1,
+                            "xmfloat2.x": 32.0,
+                            "xmfloat2.y": 32.0
+                        }
+                    },
+                    "_isDummyTexture": false
+                },
+                "_clipPosition": {
+                    "value0": {
+                        "xmfloat2.x": 0.0,
+                        "xmfloat2.y": 0.0
+                    }
+                },
+                "_clipSize": {
+                    "value0": {
+                        "xmfloat2.x": 0.0,
+                        "xmfloat2.y": 0.0
+                    }
+                },
+                "_color": {
+                    "cereal_class_version": 1,
+                    "color": {
+                        "cereal_class_version": 1,
+                        "value0": {
+                            "cereal_class_version": 1,
+                            "xmfloat4.x": 1.0,
+                            "xmfloat4.y": 1.0,
+                            "xmfloat4.z": 1.0,
+                            "xmfloat4.w": 1.0
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
