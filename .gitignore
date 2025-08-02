@@ -1,0 +1,32 @@
+# Precompiled Headers
+*.gch
+*.pch
+
+# Users
+.vs/
+x64/
+Backup/
+Design/
+bin/
+bin-int/
+
+*.cap
+*.sln
+*.log
+
+# Visual studio files
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Engine assets
+*.DentyMesh
+*.DentyApproximationCollisionMesh
+*.DentyCollisionMesh
+*.DentyMaterial
+*.DentySceneTree
+*.DentyScript
+*.DentyPrefab
+*.DentyTexture
+*.DentyCubeMaterial
+*.DentySkybox
