@@ -121,7 +121,9 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
                 "{COPYFILE} %{wks.location}/DentyEngine/Vendor/DLL/Debug/zlibd1.dll %{wks.location}/bin/%{outputdir}/DentyEngine/zlibd1.dll",
                 "{COPYFILE} %{wks.location}/DentyEngine/Vendor/DLL/Debug/minizip.dll %{wks.location}/bin/%{outputdir}/DentyEngine/minizip.dll",
                 "{COPYFILE} %{wks.location}/DentyEngine/Vendor/DLL/Debug/poly2tri.dll %{wks.location}/bin/%{outputdir}/DentyEngine/poly2tri.dll",
-                "{COPYFILE} %{wks.location}/DentyEngine/Vendor/DLL/Debug/pugixml.dll %{wks.location}/bin/%{outputdir}/DentyEngine/pugixml.dll"
+                "{COPYFILE} %{wks.location}/DentyEngine/Vendor/DLL/Debug/pugixml.dll %{wks.location}/bin/%{outputdir}/DentyEngine/pugixml.dll",
+                "{COPYFILE} %{wks.location}/DentyEngine/Vendor/DLL/Release/zlib1.dll %{wks.location}/bin/%{outputdir}/DentyEngine/zlib1.dll"
+
             }
 
         filter "configurations:Release"
