@@ -25,7 +25,7 @@
 ## 🏗️プロジェクトのビルド方法(Windows10/11, VS2022 以降)
 1. リポジトリをクローンする
 ```bash
-git clone https://github.com/naoki-0603/DentyEngine.git
+git clone https://github.com/naoki-0603/DentyEngine_Public.git
 ```
 2. Win-GenProjects.batを起動する
 
