@@ -1,7 +1,7 @@
-#pragma once
+﻿#pragma once
 
 #include "Component/ComponentGenerator.h"
-#include "Component/PhysicsBehaviour.h"
+#include "Component/PhysicsBehavior.h"
 
 #include "Physics/Vehicle/Vehicle.h"
 #include "Physics/Vehicle/SimplifiedCar.h"
@@ -9,7 +9,7 @@
 namespace DentyEngine
 {
 	class EventOnScenePlayButtonPressed;
-	class VehicleComponent final : public PhysicsBehaviour, public std::enable_shared_from_this<VehicleComponent>
+	class VehicleComponent final : public PhysicsBehavior, public std::enable_shared_from_this<VehicleComponent>
 	{
 	public:
 		VehicleComponent();
@@ -67,7 +67,7 @@ namespace DentyEngine
 		void save(Archive& archive, [[maybe_unused]] const uint32_t version) const
 		{
 			archive(
-				cereal::base_class<PhysicsBehaviour>(this)
+				cereal::base_class<PhysicsBehavior>(this)
 			);
 
 			OnSerialized();
@@ -77,7 +77,7 @@ namespace DentyEngine
 		void load(Archive& archive, [[maybe_unused]] const uint32_t version)
 		{
 			archive(
-				cereal::base_class<PhysicsBehaviour>(this)
+				cereal::base_class<PhysicsBehavior>(this)
 			);
 
 			OnDeserialized();

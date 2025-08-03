@@ -18,7 +18,7 @@
 namespace DentyEngine
 {
 	RigidBody::RigidBody() :
-		PhysicsBehaviour(), _rigidBody(), _motionState(), _collisionInfo(),
+		PhysicsBehavior(), _rigidBody(), _motionState(), _collisionInfo(),
 		_currentShape(), _boxShape(), _sphereShape(), _capsuleShape(), _convexMeshShape(),
 		_shapeType(ShapeType::Box),
 		_prevShapeType(ShapeType::Box), _collisionFilter(), _mass(1.0f), _previousMass(1.0f),
@@ -28,7 +28,7 @@ namespace DentyEngine
 	}
 
 	RigidBody::RigidBody(const RigidBody& source) :
-		PhysicsBehaviour(source), _shapeType(source._shapeType), _prevShapeType(source._prevShapeType),
+		PhysicsBehavior(source), _shapeType(source._shapeType), _prevShapeType(source._prevShapeType),
 		_collisionFilter(source._collisionFilter), _mass(source._mass), _previousMass(source._previousMass),
 		_useGravity(source._useGravity), _isKinematic(source._isKinematic)
 	{
@@ -60,7 +60,7 @@ namespace DentyEngine
 	//
 	void RigidBody::Awake()
 	{
-		PhysicsBehaviour::Awake();
+		PhysicsBehavior::Awake();
 
 		// Create all support shape type
 		{
@@ -80,7 +80,7 @@ namespace DentyEngine
 
 	void RigidBody::Start()
 	{
-		PhysicsBehaviour::Start();
+		PhysicsBehavior::Start();
 
 		// First set box shape.
 		{
@@ -97,7 +97,7 @@ namespace DentyEngine
 		if (not ApplicationLayer::IsEdit())
 			return;
 
-		PhysicsBehaviour::OnUpdate(deltaTime);
+		PhysicsBehavior::OnUpdate(deltaTime);
 
 		// Detect change mass to zero.
 		{
@@ -148,7 +148,7 @@ namespace DentyEngine
 	// Called from GameObject::OnFixedUpdate
 	void RigidBody::OnFixedUpdate()
 	{
-		PhysicsBehaviour::OnFixedUpdate();
+		PhysicsBehavior::OnFixedUpdate();
 
 		if (HasRigidBody())
 		{
@@ -186,7 +186,7 @@ namespace DentyEngine
 
 	void RigidBody::OnGui()
 	{
-		PhysicsBehaviour::OnGui();
+		PhysicsBehavior::OnGui();
 
 		if (ImGui::CollapsingHeader("States##RigidBody"))
 		{
@@ -312,29 +312,29 @@ namespace DentyEngine
 
 	void RigidBody::OnPrefabGui()
 	{
-		PhysicsBehaviour::OnPrefabGui();
+		PhysicsBehavior::OnPrefabGui();
 
 		ImGui::DragFloat("Mass##RigidBody", &_mass, 0.01f, 0.0f, 10000.0f);
 	}
 
 	void RigidBody::OnEvent(Event* e)
 	{
-		PhysicsBehaviour::OnEvent(e);
+		PhysicsBehavior::OnEvent(e);
 	}
 
 	void RigidBody::OnSerialized() const
 	{
-		PhysicsBehaviour::OnSerialized();
+		PhysicsBehavior::OnSerialized();
 	}
 
 	void RigidBody::OnDeserialized()
 	{
-		PhysicsBehaviour::OnDeserialized();
+		PhysicsBehavior::OnDeserialized();
 	}
 
 	void RigidBody::OnDestroy()
 	{
-		PhysicsBehaviour::OnDestroy();
+		PhysicsBehavior::OnDestroy();
 
 		if (HasRigidBody())
 		{
@@ -345,7 +345,7 @@ namespace DentyEngine
 
 	void RigidBody::OnGameObjectDeserialized()
 	{
-		PhysicsBehaviour::OnGameObjectDeserialized();
+		PhysicsBehavior::OnGameObjectDeserialized();
 
 		_collisionInfo.Create(GetParent()->GetEntityID());
 	}

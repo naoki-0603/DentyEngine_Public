@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "UIComponent.h"
 
@@ -12,24 +12,24 @@ namespace DentyEngine
 	}
 
 	UIComponent::UIComponent() :
-		Behaviour(), _item()
+		Behavior(), _item()
 	{
 		_name = "UIComponent";
 	}
 
 	UIComponent::UIComponent(const UIComponent& source) :
-		Behaviour(source), _item(source._item)
+		Behavior(source), _item(source._item)
 	{
 	}
 
 	void UIComponent::Awake()
 	{
-		Behaviour::Awake();
+		Behavior::Awake();
 	}
 
 	void UIComponent::Start()
 	{
-		Behaviour::Start();
+		Behavior::Start();
 	}
 
 	void UIComponent::OnUpdate([[maybe_unused]] float deltaTime)
@@ -39,39 +39,39 @@ namespace DentyEngine
 
 	void UIComponent::OnFixedUpdate()
 	{
-		Behaviour::OnFixedUpdate();
+		Behavior::OnFixedUpdate();
 	}
 
 	void UIComponent::OnGui()
 	{
-		Behaviour::OnGui();
+		Behavior::OnGui();
 
 		_item->OnGui();
 	}
 
 	void UIComponent::OnPrefabGui()
 	{
-		Behaviour::OnPrefabGui();
+		Behavior::OnPrefabGui();
 	}
 
 	void UIComponent::OnEvent(Event* e)
 	{
-		Behaviour::OnEvent(e);
+		Behavior::OnEvent(e);
 	}
 
 	void UIComponent::OnSerialized() const
 	{
-		Behaviour::OnSerialized();
+		Behavior::OnSerialized();
 	}
 
 	void UIComponent::OnDeserialized()
 	{
-		Behaviour::OnDeserialized();
+		Behavior::OnDeserialized();
 	}
 
 	void UIComponent::OnDestroy()
 	{
-		Behaviour::OnDestroy();
+		Behavior::OnDestroy();
 
 		if (_item)
 		{
@@ -81,7 +81,7 @@ namespace DentyEngine
 
 	void UIComponent::OnGameObjectDeserialized()
 	{
-		Behaviour::OnGameObjectDeserialized();
+		Behavior::OnGameObjectDeserialized();
 	}
 
 	void UIComponent::OnSceneActivated()

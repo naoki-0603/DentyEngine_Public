@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "GameCamera.h"
 
@@ -24,7 +24,7 @@ namespace DentyEngine
 	Ref<GameCamera> GameCamera::_mainCamera = nullptr;
 
 	GameCamera::GameCamera() :
-		Camera(GraphicsManager::GetInstance().GetDevice()), Behaviour(), _gizmoSprite(), _oldProjectionType()
+		Camera(GraphicsManager::GetInstance().GetDevice()), Behavior(), _gizmoSprite(), _oldProjectionType()
 	{
 		_name = "GameCamera";
 
@@ -32,7 +32,7 @@ namespace DentyEngine
 	}
 
 	GameCamera::GameCamera(const GameCamera& source) :
-		Camera(source), Behaviour(source), _oldProjectionType(source._oldProjectionType)
+		Camera(source), Behavior(source), _oldProjectionType(source._oldProjectionType)
 	{
 		CreateGizmoSprite();
 	}
@@ -137,7 +137,7 @@ namespace DentyEngine
 
 	void GameCamera::OnFixedUpdate()
 	{
-		Behaviour::OnFixedUpdate();
+		Behavior::OnFixedUpdate();
 	}
 
 	void GameCamera::OnEvent(Event* e)
@@ -211,7 +211,7 @@ namespace DentyEngine
 
 	void GameCamera::OnDestroy()
 	{
-		Behaviour::OnDestroy();
+		Behavior::OnDestroy();
 
 		if (GetParent()->tag() == "MainCamera")
 		{

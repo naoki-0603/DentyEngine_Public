@@ -1,10 +1,8 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "EffectModuleBehaviour.h"
 
 #include "Utilities/ImGuiUtilities.h"
-
-
 
 namespace DentyEngine
 {

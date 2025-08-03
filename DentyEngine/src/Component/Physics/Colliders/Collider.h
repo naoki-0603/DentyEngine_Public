@@ -1,6 +1,6 @@
-#pragma once
+﻿#pragma once
 
-#include "Component/PhysicsBehaviour.h"
+#include "Component/PhysicsBehavior.h"
 
 #include "Physics/Shapes/IShape.h"
 
@@ -13,7 +13,7 @@ namespace DentyEngine
 	class EventGameObjectTagChanged;
     class EventOnSettingsWindowClosed;
 
-	class Collider : public PhysicsBehaviour, public std::enable_shared_from_this<Collider>
+	class Collider : public PhysicsBehavior, public std::enable_shared_from_this<Collider>
 	{
 	public:
 		enum class Type : int32_t
@@ -117,7 +117,7 @@ namespace DentyEngine
 			if (version == 1u)
 			{
 			    archive(
-					cereal::base_class<PhysicsBehaviour>(this),
+					cereal::base_class<PhysicsBehavior>(this),
 					CEREAL_NVP(_center),
 					CEREAL_NVP(_type),
 					CEREAL_NVP(_collisionFlag),
@@ -133,7 +133,7 @@ namespace DentyEngine
 			if (version == 1u)
 			{
 			    archive(
-					cereal::base_class<PhysicsBehaviour>(this),
+					cereal::base_class<PhysicsBehavior>(this),
 					CEREAL_NVP(_center),
 					CEREAL_NVP(_type),
 					CEREAL_NVP(_collisionFlag),

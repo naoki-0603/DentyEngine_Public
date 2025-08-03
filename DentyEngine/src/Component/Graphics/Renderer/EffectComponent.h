@@ -1,6 +1,6 @@
-#pragma once
+﻿#pragma once
 
-#include "Component/Behaviour.h"
+#include "Component/Behavior.h"
 #include "Component/ComponentGenerator.h"
 
 #include "Graphics/Renderer/Effect/Effect.h"

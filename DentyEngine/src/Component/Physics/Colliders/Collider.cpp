@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "Collider.h"
 
@@ -16,14 +16,14 @@
 
 namespace DentyEngine
 {
-	Collider::Collider() : PhysicsBehaviour(),
+	Collider::Collider() : PhysicsBehavior(),
 		_ghostObject(), _collisionInfo(), _type(), _collisionFlag(), _collisionFilter(), _isTrigger()
 	{
 		_multipleAllowed = false;
 	}
 
 	Collider::Collider(const Collider& source) :
-		PhysicsBehaviour(source), _type(source._type),
+		PhysicsBehavior(source), _type(source._type),
 		_collisionFlag(source._collisionFlag),
 		_collisionFilter(source._collisionFilter),
 		_isTrigger(source._isTrigger)
@@ -85,7 +85,7 @@ namespace DentyEngine
 
 	void Collider::OnFixedUpdate()
 	{
-		PhysicsBehaviour::OnFixedUpdate();
+		PhysicsBehavior::OnFixedUpdate();
 
 		// Update transform.
 		{
@@ -141,7 +141,7 @@ namespace DentyEngine
 
 	void Collider::OnPrefabGui()
 	{
-		PhysicsBehaviour::OnPrefabGui();
+		PhysicsBehavior::OnPrefabGui();
 
 		// Get physics settings.
 		//const auto physicsSettings = SettingsManager::GetInstance().GetPhysicsSettings();
@@ -189,7 +189,7 @@ namespace DentyEngine
 
 	void Collider::OnDestroy()
 	{
-		Behaviour::OnDestroy();
+		PhysicsBehavior::OnDestroy();
 
 		PhysicsEngine::GetInstance()->RemoveCollisionObject(shared_from_this());
 	}

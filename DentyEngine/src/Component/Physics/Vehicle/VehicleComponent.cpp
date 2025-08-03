@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "VehicleComponent.h"
 
@@ -15,19 +15,19 @@
 namespace DentyEngine
 {
 	VehicleComponent::VehicleComponent() :
-		PhysicsBehaviour(), _car()
+		PhysicsBehavior(), _car()
 	{
 		_name = "VehicleComponent";
 	}
 
 	VehicleComponent::VehicleComponent(const VehicleComponent& source) :
-		PhysicsBehaviour(source), _car(source._car)
+		PhysicsBehavior(source), _car(source._car)
 	{
 	}
 
 	void VehicleComponent::Awake()
 	{
-		PhysicsBehaviour::Awake();
+		PhysicsBehavior::Awake();
 
 		const std::optional<uint32_t> tagNumber = Tag::GetTagNumberFrom(GetParent()->tag());
 		if (tagNumber.has_value())
@@ -42,12 +42,12 @@ namespace DentyEngine
 
 	void VehicleComponent::Start()
 	{
-		PhysicsBehaviour::Start();
+		PhysicsBehavior::Start();
 	}
 
 	void VehicleComponent::OnUpdate(float deltaTime)
 	{
-		PhysicsBehaviour::OnUpdate(deltaTime);
+		PhysicsBehavior::OnUpdate(deltaTime);
 
 		if (ApplicationLayer::IsPlay())
 		{
@@ -62,24 +62,24 @@ namespace DentyEngine
 
 	void VehicleComponent::OnFixedUpdate()
 	{
-		PhysicsBehaviour::OnFixedUpdate();
+		PhysicsBehavior::OnFixedUpdate();
 
 		UpdateTransform();
 	}
 
 	void VehicleComponent::OnGui()
 	{
-		PhysicsBehaviour::OnGui();
+		PhysicsBehavior::OnGui();
 	}
 
 	void VehicleComponent::OnPrefabGui()
 	{
-		PhysicsBehaviour::OnPrefabGui();
+		PhysicsBehavior::OnPrefabGui();
 	}
 
 	void VehicleComponent::OnEvent(Event* e)
 	{
-		PhysicsBehaviour::OnEvent(e);
+		PhysicsBehavior::OnEvent(e);
 
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<EventOnScenePlayButtonPressed>(BIND_EVENT_FUNCTION(OnScenePlayButtonPressed));
@@ -87,22 +87,22 @@ namespace DentyEngine
 
 	void VehicleComponent::OnSerialized() const
 	{
-		PhysicsBehaviour::OnSerialized();
+		PhysicsBehavior::OnSerialized();
 	}
 
 	void VehicleComponent::OnDeserialized()
 	{
-		PhysicsBehaviour::OnDeserialized();
+		PhysicsBehavior::OnDeserialized();
 	}
 
 	void VehicleComponent::OnDestroy()
 	{
-		PhysicsBehaviour::OnDestroy();
+		PhysicsBehavior::OnDestroy();
 	}
 
 	void VehicleComponent::OnGameObjectDeserialized()
 	{
-		PhysicsBehaviour::OnGameObjectDeserialized();
+		PhysicsBehavior::OnGameObjectDeserialized();
 	}
 
 	void VehicleComponent::OnSceneActivated()

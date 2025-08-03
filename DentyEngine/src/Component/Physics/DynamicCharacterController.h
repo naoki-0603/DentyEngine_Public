@@ -1,7 +1,7 @@
-#pragma once
+﻿#pragma once
 
 #include "Component/ComponentGenerator.h"
-#include "Component/PhysicsBehaviour.h"
+#include "Component/PhysicsBehavior.h"
 
 #include "System/Editor/DragAndDrop/DragAndDrop.h"
 
@@ -29,7 +29,7 @@ namespace DentyEngine
 	//
 	// Unused class. (2024/01/09)
 	//
-	class DynamicCharacterController final : public PhysicsBehaviour, public std::enable_shared_from_this<DynamicCharacterController>
+	class DynamicCharacterController final : public PhysicsBehavior, public std::enable_shared_from_this<DynamicCharacterController>
 	{
 	public:
 		DynamicCharacterController();
@@ -111,7 +111,7 @@ namespace DentyEngine
 		void save(Archive& archive) const
 		{
 			archive(
-				cereal::base_class<PhysicsBehaviour>(this),
+				cereal::base_class<PhysicsBehavior>(this),
 				CEREAL_NVP(_currentShapeType),
 				CEREAL_NVP(_mass),
 				CEREAL_NVP(_maxSteeringAngle),
@@ -126,7 +126,7 @@ namespace DentyEngine
 		void load(Archive& archive)
 		{
 			archive(
-				cereal::base_class<PhysicsBehaviour>(this),
+				cereal::base_class<PhysicsBehavior>(this),
 				CEREAL_NVP(_currentShapeType),
 				CEREAL_NVP(_mass),
 				CEREAL_NVP(_maxSteeringAngle),

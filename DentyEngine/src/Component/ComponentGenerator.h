@@ -1,6 +1,6 @@
-#pragma once
+﻿#pragma once
 
-#include "MonoBehaviour.h"
+#include "Behavior.h"
 
 namespace DentyEngine
 {
@@ -34,18 +34,8 @@ namespace DentyEngine
 			_buildInComponentGenerators.emplace(componentName, Generate<ComponentType>);
 		}
 
-		template <class MonoBehaviourType>
-		static void AddMonoBehaviourGenerator(std::string_view monoBehaviourName)
-		{
-			_monoBehaviourGenerators.emplace(monoBehaviourName, Generate<MonoBehaviourType>);
-		}
-
-		static void AddMono(const Ref<MonoBehaviour>& monoComponent);
-
 		static Ref<Component> FindBuildInComponent(std::string_view componentName);
 
-		static Ref<MonoBehaviour> FindMonoComponent(std::string_view monoComponentName);
-		
 		static const std::vector<std::string>& GetBuildInComponentNames() { return _buildInComponentNames; }
 		static const std::vector<std::string>& GetMonoComponentNames() { return _monoComponentNames; }
 	private:
@@ -53,7 +43,7 @@ namespace DentyEngine
 		static std::vector<std::string> _monoComponentNames;
 
 		static std::unordered_map<std::string, std::function<Ref<Component>()>> _buildInComponentGenerators;
-		static std::unordered_map<std::string, std::function<Ref<MonoBehaviour>()>> _monoBehaviourGenerators;
+		//static std::unordered_map<std::string, std::function<Ref<MonoBehaviour>()>> _monoBehaviourGenerators;
 	};
 
 #define DENTY_REGISTER_MONO_COMPONENT(MonoComponent) \

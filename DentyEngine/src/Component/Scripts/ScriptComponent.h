@@ -1,8 +1,8 @@
-#pragma once
+﻿#pragma once
 
 #include "Component/ComponentGenerator.h"
 
-#include "Component/MonoBehaviour.h"
+#include "Component/MonoBehavior.h"
 
 #include "System/Editor/DragAndDrop/DragAndDrop.h"
 
@@ -18,7 +18,7 @@ namespace DentyEngine
     class ScriptClass;
     class ScriptObject;
 
-	class ScriptComponent final : public MonoBehaviour, public std::enable_shared_from_this<ScriptComponent>
+	class ScriptComponent final : public MonoBehavior, public std::enable_shared_from_this<ScriptComponent>
 	{
 	public:
 		ScriptComponent();
@@ -113,7 +113,7 @@ namespace DentyEngine
 		void save(Archive& archive, [[maybe_unused]] const uint32_t version) const
 		{
 			archive(
-				cereal::base_class<MonoBehaviour>(this),
+				cereal::base_class<MonoBehavior>(this),
 				CEREAL_NVP(_scriptFilePathToSerialized)
 			);
 
@@ -124,7 +124,7 @@ namespace DentyEngine
 		void load(Archive& archive, [[maybe_unused]] const uint32_t version)
 		{
 			archive(
-				cereal::base_class<MonoBehaviour>(this),
+				cereal::base_class<MonoBehavior>(this),
 				CEREAL_NVP(_scriptFilePathToSerialized)
 			);
 

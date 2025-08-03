@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "ComponentGenerator.h"
 
@@ -10,7 +10,6 @@ namespace DentyEngine
 	std::vector<std::string> ComponentGenerator::_monoComponentNames = {};
 
 	std::unordered_map<std::string, std::function<Ref<Component>()>> ComponentGenerator::_buildInComponentGenerators = {};
-	std::unordered_map<std::string, std::function<Ref<MonoBehaviour>()>> ComponentGenerator::_monoBehaviourGenerators = {};
 
 	ComponentGenerator::ComponentGenerator()
 	{
@@ -277,11 +276,6 @@ namespace DentyEngine
 		ImGui::End();
 	}
 
-	void ComponentGenerator::AddMono(const Ref<MonoBehaviour>& monoComponent)
-	{
-		_monoComponentNames.emplace_back(monoComponent->GetName());
-	}
-
 	Ref<Component> ComponentGenerator::FindBuildInComponent(std::string_view componentName)
 	{
 		const auto& it = _buildInComponentGenerators.find(std::string(componentName));
@@ -290,24 +284,9 @@ namespace DentyEngine
 		{
 			return it->second();
 		}
-		DENTY_SET_ERR_COLOR
 
+		DENTY_SET_ERR_COLOR
 		DENTY_ERR_LOG << componentName << " is not found!";
-
-		return nullptr;
-	}
-
-	Ref<MonoBehaviour> ComponentGenerator::FindMonoComponent(std::string_view monoComponentName)
-	{
-		const auto& it = _monoBehaviourGenerators.find(std::string(monoComponentName));
-
-		if (it != _monoBehaviourGenerators.end())
-		{
-			return it->second();
-		}
-		DENTY_SET_ERR_COLOR
-
-		DENTY_ERR_LOG << monoComponentName << " is not found!";
 
 		return nullptr;
 	}

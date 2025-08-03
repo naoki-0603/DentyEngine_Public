@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "DynamicCharacterController.h"
 
@@ -22,7 +22,7 @@
 namespace DentyEngine
 {
 	DynamicCharacterController::DynamicCharacterController() :
-		PhysicsBehaviour(), _rigidBody(), _motionState(), _action(), _currentShape(),
+		PhysicsBehavior(), _rigidBody(), _motionState(), _action(), _currentShape(),
 		_boxShape(), _sphereShape(), _capsuleShape(), 
 		_collisionInfo(), _currentShapeType(), _prevShapeType(), _gravityDirection(GravityDirection::Down),
         _mass(1.0f), _maxSteeringAngle(120.0f), _maxThrust(15.0f), _maxBrake(25.0f), _maxSpeed(15.0f), _maxGrip(20.0f)
@@ -31,7 +31,7 @@ namespace DentyEngine
 	}
 
 	DynamicCharacterController::DynamicCharacterController(const DynamicCharacterController& source) :
-		PhysicsBehaviour(source), _collisionInfo(), _currentShapeType(source._currentShapeType),
+		PhysicsBehavior(source), _collisionInfo(), _currentShapeType(source._currentShapeType),
 		_prevShapeType(source._prevShapeType), _gravity(source._gravity),
         _gravityDirection(source._gravityDirection), _mass(source._mass), _maxSteeringAngle(source._maxSteeringAngle),
         _maxThrust(source._maxThrust), _maxBrake(source._maxBrake), _maxSpeed(source._maxSpeed), _maxGrip(source._maxGrip)
@@ -41,7 +41,7 @@ namespace DentyEngine
 
 	void DynamicCharacterController::Awake()
 	{
-		PhysicsBehaviour::Awake();
+		PhysicsBehavior::Awake();
 
 		_collisionInfo.Create(GetParent()->GetEntityID());
 
@@ -54,12 +54,12 @@ namespace DentyEngine
 
 	void DynamicCharacterController::Start()
 	{
-		PhysicsBehaviour::Start();
+		PhysicsBehavior::Start();
 	}
 
 	void DynamicCharacterController::OnUpdate(float deltaTime)
 	{
-		PhysicsBehaviour::OnUpdate(deltaTime);
+		PhysicsBehavior::OnUpdate(deltaTime);
 
 		if (HasRigidBodyAndAction())
 		{
@@ -103,12 +103,12 @@ namespace DentyEngine
 
 	void DynamicCharacterController::OnFixedUpdate()
 	{
-		PhysicsBehaviour::OnFixedUpdate();
+		PhysicsBehavior::OnFixedUpdate();
 	}
 
 	void DynamicCharacterController::OnGui()
 	{
-		PhysicsBehaviour::OnGui();
+		PhysicsBehavior::OnGui();
 
 		// Status
 		{
@@ -212,12 +212,12 @@ namespace DentyEngine
 
 	void DynamicCharacterController::OnPrefabGui()
 	{
-		PhysicsBehaviour::OnPrefabGui();
+		PhysicsBehavior::OnPrefabGui();
 	}
 
 	void DynamicCharacterController::OnEvent(Event* e)
 	{
-		PhysicsBehaviour::OnEvent(e);
+		PhysicsBehavior::OnEvent(e);
 
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<EventGameObjectTagChanged>(BIND_EVENT_FUNCTION(OnGameObjectTagChanged));
@@ -225,7 +225,7 @@ namespace DentyEngine
 
 	void DynamicCharacterController::OnDestroy()
 	{
-		PhysicsBehaviour::OnDestroy();
+		PhysicsBehavior::OnDestroy();
 
 		if (HasRigidBodyAndAction())
 		{
@@ -235,22 +235,22 @@ namespace DentyEngine
 
 	void DynamicCharacterController::Destroy()
 	{
-		PhysicsBehaviour::Destroy();
+		PhysicsBehavior::Destroy();
 	}
 
 	void DynamicCharacterController::OnSerialized() const
 	{
-		PhysicsBehaviour::OnSerialized();
+		PhysicsBehavior::OnSerialized();
 	}
 
 	void DynamicCharacterController::OnDeserialized()
 	{
-		PhysicsBehaviour::OnDeserialized();
+		PhysicsBehavior::OnDeserialized();
 	}
 
 	void DynamicCharacterController::OnGameObjectDeserialized()
 	{
-		PhysicsBehaviour::OnGameObjectDeserialized();
+		PhysicsBehavior::OnGameObjectDeserialized();
 
 		_collisionInfo.Create(GetParent()->GetEntityID());
 

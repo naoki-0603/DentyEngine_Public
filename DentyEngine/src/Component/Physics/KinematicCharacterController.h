@@ -1,8 +1,8 @@
-#pragma once
+﻿#pragma once
 
 #include "Component/ComponentGenerator.h"
 
-#include "Component/PhysicsBehaviour.h"
+#include "Component/PhysicsBehavior.h"
 
 #include "System/Physics/PhysicsData.h"
 
@@ -19,7 +19,7 @@ namespace DentyEngine
 	//
 	// Unused class. (2024/01/09)
 	//
-	class KinematicCharacterController final : public PhysicsBehaviour, public std::enable_shared_from_this<KinematicCharacterController>
+	class KinematicCharacterController final : public PhysicsBehavior, public std::enable_shared_from_this<KinematicCharacterController>
 	{
 	public:
 		KinematicCharacterController();
@@ -77,7 +77,7 @@ namespace DentyEngine
 		void save(Archive& archive) const
 		{
 			archive(
-				cereal::base_class<PhysicsBehaviour>(this)
+				cereal::base_class<PhysicsBehavior>(this)
 			);
 
 			OnSerialized();
@@ -87,7 +87,7 @@ namespace DentyEngine
 		void load(Archive& archive)
 		{
 			archive(
-				cereal::base_class<PhysicsBehaviour>(this)
+				cereal::base_class<PhysicsBehavior>(this)
 			);
 
 			OnDeserialized();

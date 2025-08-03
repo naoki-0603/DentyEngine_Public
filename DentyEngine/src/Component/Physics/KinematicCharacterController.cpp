@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "KinematicCharacterController.h"
 
@@ -16,7 +16,7 @@
 namespace DentyEngine
 {
 	KinematicCharacterController::KinematicCharacterController() :
-		PhysicsBehaviour(), _controller(), _pairCachingGhostObject(),
+		PhysicsBehavior(), _controller(), _pairCachingGhostObject(),
 		_currentShape(), _boxShape(), _sphereShape(), _capsuleShape(), _convexMeshShape(),
 		_currentShapeType(), _prevShapeType()
 	{
@@ -24,13 +24,13 @@ namespace DentyEngine
 	}
 
 	KinematicCharacterController::KinematicCharacterController(const KinematicCharacterController& source) :
-		PhysicsBehaviour(source), _currentShapeType(source._currentShapeType), _prevShapeType(source._prevShapeType)
+		PhysicsBehavior(source), _currentShapeType(source._currentShapeType), _prevShapeType(source._prevShapeType)
 	{
 	}
 
 	void KinematicCharacterController::Awake()
 	{
-		PhysicsBehaviour::Awake();
+		PhysicsBehavior::Awake();
 
 		CreateShapes();
 
@@ -44,24 +44,24 @@ namespace DentyEngine
 
 	void KinematicCharacterController::Start()
 	{
-		PhysicsBehaviour::Start();
+		PhysicsBehavior::Start();
 	}
 
 	void KinematicCharacterController::OnUpdate(float deltaTime)
 	{
-		PhysicsBehaviour::OnUpdate(deltaTime);
+		PhysicsBehavior::OnUpdate(deltaTime);
 
 
 	}
 
 	void KinematicCharacterController::OnFixedUpdate()
 	{
-		PhysicsBehaviour::OnFixedUpdate();
+		PhysicsBehavior::OnFixedUpdate();
 	}
 
 	void KinematicCharacterController::OnGui()
 	{
-		PhysicsBehaviour::OnGui();
+		PhysicsBehavior::OnGui();
 
 		// Shapes.
 		{
@@ -108,17 +108,17 @@ namespace DentyEngine
 
 	void KinematicCharacterController::OnPrefabGui()
 	{
-		PhysicsBehaviour::OnPrefabGui();
+		PhysicsBehavior::OnPrefabGui();
 	}
 
 	void KinematicCharacterController::OnEvent(Event* e)
 	{
-		PhysicsBehaviour::OnEvent(e);
+		PhysicsBehavior::OnEvent(e);
 	}
 
 	void KinematicCharacterController::OnDestroy()
 	{
-		PhysicsBehaviour::OnDestroy();
+		PhysicsBehavior::OnDestroy();
 
 		if (HasControllerAndGhostObject())
 		{
@@ -127,22 +127,22 @@ namespace DentyEngine
 
 	void KinematicCharacterController::Destroy()
 	{
-		PhysicsBehaviour::Destroy();
+		PhysicsBehavior::Destroy();
 	}
 
 	void KinematicCharacterController::OnSerialized() const
 	{
-		PhysicsBehaviour::OnSerialized();
+		PhysicsBehavior::OnSerialized();
 	}
 
 	void KinematicCharacterController::OnDeserialized()
 	{
-		PhysicsBehaviour::OnDeserialized();
+		PhysicsBehavior::OnDeserialized();
 	}
 
 	void KinematicCharacterController::OnGameObjectDeserialized()
 	{
-		PhysicsBehaviour::OnGameObjectDeserialized();
+		PhysicsBehavior::OnGameObjectDeserialized();
 	}
 
 	void KinematicCharacterController::OnSceneActivated()

@@ -1,6 +1,6 @@
-#pragma once
+﻿#pragma once
 
-#include "Component/Behaviour.h"
+#include "Component/Behavior.h"
 #include "Component/ComponentGenerator.h"
 
 #include "System/Core/ID/EntityID.h"
@@ -10,7 +10,7 @@ namespace DentyEngine
 	class VehicleComponent;
 	class GameCamera;
 
-	class DefaultCameraController final : public Behaviour, public std::enable_shared_from_this<DefaultCameraController>
+	class DefaultCameraController final : public Behavior, public std::enable_shared_from_this<DefaultCameraController>
 	{
 	public:
 		DefaultCameraController();
@@ -50,7 +50,7 @@ namespace DentyEngine
 			if (version <= 1u)
 			{
 			    archive(
-				    cereal::base_class<Behaviour>(this),
+				    cereal::base_class<Behavior>(this),
 				    CEREAL_NVP(_targetID),
 				    CEREAL_NVP(_offset),
 				    CEREAL_NVP(_distance),
@@ -67,7 +67,7 @@ namespace DentyEngine
 			if (version <= 1u)
 			{
 			    archive(
-				    cereal::base_class<Behaviour>(this),
+				    cereal::base_class<Behavior>(this),
 				    CEREAL_NVP(_targetID),
 				    CEREAL_NVP(_offset),
 				    CEREAL_NVP(_distance),

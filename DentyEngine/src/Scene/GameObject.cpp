@@ -1,11 +1,11 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "GameObject.h"
 
 #include "Graphics/Renderer/Texture2D.h"
 
-#include "Component/Behaviour.h"
-#include "Component/MonoBehaviour.h"
+#include "Component/Behavior.h"
+#include "Component/MonoBehavior.h"
 #include "Component/Controller/DefaultCameraController.h"
 
 #include "Component/Graphics/Renderer/MeshRenderer.h"
@@ -558,23 +558,6 @@ namespace DentyEngine
         return AddComponentOnInspector(component);
     }
 
-    Component* GameObject::AddMonoComponent(std::string_view componentName)
-    {
-        const auto component = ComponentGenerator::FindMonoComponent(componentName);
-
-        if (not component) return nullptr;
-        if (not component->MultipleAllowed())
-        {
-            if (HasComponent(componentName))
-            {
-                DENTY_ERR_CONSOLE_LOG("Already has %s component!", std::string(componentName).c_str());
-                return nullptr;
-            }
-        }
-
-        return AddComponentOnInspector(component);
-    }
-
     bool GameObject::HasComponent(std::string_view componentName) const
     {
         for (const auto& component : _components)
@@ -652,15 +635,15 @@ namespace DentyEngine
             case Component::InheritedType::Component:
                 // Nothing to do.
                 break;
-            case Component::InheritedType::Behaviour:
-                std::static_pointer_cast<Behaviour>(component)->OnUpdate(deltaTime);
+            case Component::InheritedType::Behavior:
+                std::static_pointer_cast<Behavior>(component)->OnUpdate(deltaTime);
                 break;
-            case Component::InheritedType::PhysicsBehaviour:
+            case Component::InheritedType::PhysicsBehavior:
             {
-                const auto& physicsBehaviour = std::static_pointer_cast<PhysicsBehaviour>(component);
-                physicsBehaviour->OnUpdate(deltaTime);
+                const auto& physicsBehavior = std::static_pointer_cast<PhysicsBehavior>(component);
+                physicsBehavior->OnUpdate(deltaTime);
             }
-            case Component::InheritedType::MonoBehaviour:
+            case Component::InheritedType::MonoBehavior:
                 // Nothing to do.
                 break;
             default:
@@ -687,14 +670,14 @@ namespace DentyEngine
             case Component::InheritedType::Component:
                 // Nothing to do.
                 break;
-            case Component::InheritedType::Behaviour:
-                std::static_pointer_cast<Behaviour>(component)->OnFixedUpdate();
+            case Component::InheritedType::Behavior:
+                std::static_pointer_cast<Behavior>(component)->OnFixedUpdate();
                 break;
-            case Component::InheritedType::PhysicsBehaviour:
-                std::static_pointer_cast<PhysicsBehaviour>(component)->OnFixedUpdate();
+            case Component::InheritedType::PhysicsBehavior:
+                std::static_pointer_cast<PhysicsBehavior>(component)->OnFixedUpdate();
                 break;
-            case Component::InheritedType::MonoBehaviour:
-                std::static_pointer_cast<MonoBehaviour>(component)->OnFixedUpdate();
+            case Component::InheritedType::MonoBehavior:
+                std::static_pointer_cast<MonoBehavior>(component)->OnFixedUpdate();
                 break;
             default:
                 DENTY_ASSERT(false, "Unknown inherited type.");

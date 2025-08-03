@@ -1,6 +1,6 @@
-#pragma once
+﻿#pragma once
 
-#include "Component/Behaviour.h"
+#include "Component/Behavior.h"
 
 #include "Component/ComponentGenerator.h"
 
@@ -8,7 +8,7 @@
 
 namespace DentyEngine
 {
-	class Animator final : public Behaviour, public std::enable_shared_from_this<Animator>
+	class Animator final : public Behavior, public std::enable_shared_from_this<Animator>
 	{
 	public:
 		Animator();
@@ -77,7 +77,7 @@ namespace DentyEngine
 			if (version <= 1u)
 			{
 			    archive(
-				    cereal::base_class<Behaviour>(this),
+				    cereal::base_class<Behavior>(this),
 				    CEREAL_NVP(_speed)
 			    );    
 			}
@@ -91,7 +91,7 @@ namespace DentyEngine
 			if (version <= 1u)
 			{
 			    archive(
-				    cereal::base_class<Behaviour>(this),
+				    cereal::base_class<Behavior>(this),
 				    CEREAL_NVP(_speed)
 			    );    
 			}

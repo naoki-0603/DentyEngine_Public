@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "System/Core/Object.h"
 #include "System/Core/Tag.h"
@@ -29,7 +29,6 @@ namespace DentyEngine
 		bool HasComponent(std::string_view componentName) const;
 	private:
 		void AddBuildInComponent(std::string_view componentName);
-		void AddMonoComponent(std::string_view componentName);
 
 	private:
 		std::vector<Ref<Component>> _components;

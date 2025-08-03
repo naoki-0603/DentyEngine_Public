@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "ScriptComponent.h"
 
@@ -22,14 +22,14 @@
 namespace DentyEngine
 {
     ScriptComponent::ScriptComponent() :
-        MonoBehaviour(), _script(), _scriptFilePathToSerialized(), _scriptObject(), _scriptClass(), _invokedOnCreated()
+        MonoBehavior(), _script(), _scriptFilePathToSerialized(), _scriptObject(), _scriptClass(), _invokedOnCreated()
     {
         _name = "ScriptComponent";
         _multipleAllowed = true;
     }
 
     ScriptComponent::ScriptComponent(const ScriptComponent& source) :
-        MonoBehaviour(source), _scriptFilePathToSerialized(source._scriptFilePathToSerialized)
+        MonoBehavior(source), _scriptFilePathToSerialized(source._scriptFilePathToSerialized)
     {
         _invokedOnCreated = false;
 
@@ -51,12 +51,12 @@ namespace DentyEngine
 
     void ScriptComponent::Awake()
     {
-        MonoBehaviour::Awake();
+        MonoBehavior::Awake();
     }
 
     void ScriptComponent::Start()
     {
-        MonoBehaviour::Start();
+        MonoBehavior::Start();
 
         // Add to script engine.
         ScriptEngine::Add(shared_from_this());
@@ -64,27 +64,27 @@ namespace DentyEngine
 
     void ScriptComponent::OnUpdate(float deltaTime)
     {
-        MonoBehaviour::OnUpdate(deltaTime);
+        MonoBehavior::OnUpdate(deltaTime);
     }
 
     void ScriptComponent::OnFixedUpdate()
     {
-        MonoBehaviour::OnFixedUpdate();
+        MonoBehavior::OnFixedUpdate();
     }
 
     void ScriptComponent::OnLateUpdate(float deltaTime)
     {
-        MonoBehaviour::OnLateUpdate(deltaTime);
+        MonoBehavior::OnLateUpdate(deltaTime);
     }
 
     void ScriptComponent::OnEnabled()
     {
-        MonoBehaviour::OnEnabled();
+        MonoBehavior::OnEnabled();
     }
 
     void ScriptComponent::OnDisable()
     {
-        MonoBehaviour::OnDisable();
+        MonoBehavior::OnDisable();
     }
 
     void ScriptComponent::OnDestroy()
@@ -102,14 +102,14 @@ namespace DentyEngine
 
     void ScriptComponent::OnGui()
     {
-        MonoBehaviour::OnGui();
+        MonoBehavior::OnGui();
              
         ReceiveScriptGui();
     }
 
     void ScriptComponent::OnPrefabGui()
     {
-        MonoBehaviour::OnPrefabGui();
+        MonoBehavior::OnPrefabGui();
     }
 
     void ScriptComponent::OnSceneActivated()
@@ -134,17 +134,17 @@ namespace DentyEngine
 
     void ScriptComponent::OnSerialized() const
     {
-        MonoBehaviour::OnSerialized();
+        MonoBehavior::OnSerialized();
     }
 
     void ScriptComponent::OnDeserialized()
     {
-        MonoBehaviour::OnDeserialized();
+        MonoBehavior::OnDeserialized();
     }
 
     void ScriptComponent::OnGameObjectDeserialized()
     {
-        MonoBehaviour::OnGameObjectDeserialized();
+        MonoBehavior::OnGameObjectDeserialized();
 
         //if (_scriptFilePathToSerialized.IsValid())
         //{

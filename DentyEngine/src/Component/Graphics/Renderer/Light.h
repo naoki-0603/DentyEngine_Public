@@ -1,6 +1,6 @@
-#pragma once
+﻿#pragma once
 
-#include "Component/Behaviour.h"
+#include "Component/Behavior.h"
 
 #include "Graphics/Color.h"
 

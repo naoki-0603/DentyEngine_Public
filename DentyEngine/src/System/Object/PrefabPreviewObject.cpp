@@ -1,8 +1,8 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "PrefabPreviewObject.h"
 
-#include "Component/MonoBehaviour.h"
+#include "Component/Behavior.h"
 #include "Component/Graphics/Renderer/Renderer.h"
 
 #include "Component/ComponentGenerator.h"
@@ -115,10 +115,6 @@ namespace DentyEngine
                     {
                         AddBuildInComponent(componentName);
                     }
-                    else
-                    {
-                        AddMonoComponent(componentName);
-                    }
                 }
             }
         }
@@ -180,26 +176,6 @@ namespace DentyEngine
             DENTY_ERR_LOG << requiredComponentName.c_str() << " component is required!";
 
             return;
-        }
-
-        _components.emplace_back(component);
-	}
-
-	void PrefabPreviewObject::AddMonoComponent(std::string_view componentName)
-	{
-        const auto component = ComponentGenerator::FindMonoComponent(componentName);
-
-        if (not component) 
-            return;
-
-		if (not component->MultipleAllowed())
-        {
-            if (HasComponent(componentName))
-            {
-                DENTY_SET_ERR_COLOR
-                DENTY_ERR_LOG << "Already has " << component->GetName().c_str() << " component!";
-                return;
-            }
         }
 
         _components.emplace_back(component);

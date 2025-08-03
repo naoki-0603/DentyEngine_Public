@@ -1,6 +1,4 @@
-#pragma once
-
-#include "Component/Physics/PhysicalMovement.h"
+﻿#pragma once
 
 #include "Graphics/Renderer/Camera.h"
 

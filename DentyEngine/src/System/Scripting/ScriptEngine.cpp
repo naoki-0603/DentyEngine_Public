@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "ScriptEngine.h"
 
@@ -77,7 +77,7 @@ namespace DentyEngine
 
         outputStream << "\n";
 
-        outputStream << std::format("\tpublic class {} : MonoBehaviour\n", FilePath(filePath).RemoveExtension().Filename().GetAsString());
+        outputStream << std::format("\tpublic class {} : MonoBehavior\n", FilePath(filePath).RemoveExtension().Filename().GetAsString());
 		outputStream << "\t{\n";
 
         // Constructor
@@ -90,7 +90,7 @@ namespace DentyEngine
 		outputStream << ("\t\tpublic override void OnCreated(uint entityID)\n");
 		outputStream << ("\t\t{\n");
         outputStream << ("\t\t\tbase.OnCreated(entityID);\n");
-        outputStream << std::format("\t\t\tAddMonoBehaviour(this, {}{}{}); \n", '"', FilePath(filePath).RemoveExtension().Filename().GetAsString(), '"');
+        outputStream << std::format("\t\t\AddMonoBehavior(this, {}{}{}); \n", '"', FilePath(filePath).RemoveExtension().Filename().GetAsString(), '"');
 		outputStream << ("\t\t}\n");
 
 		outputStream << ("\n");

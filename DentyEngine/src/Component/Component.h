@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "System/Core/ID/ComponentID.h"
 #include "System/Core/Object.h"
@@ -13,9 +13,9 @@ namespace DentyEngine
         enum class InheritedType
         {
             Component,
-            Behaviour,
-            PhysicsBehaviour,
-            MonoBehaviour,
+            Behavior,
+            PhysicsBehavior,
+            MonoBehavior,
 
             Max
         };

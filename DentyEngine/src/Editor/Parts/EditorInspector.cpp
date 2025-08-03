@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "EditorInspector.h"
 
@@ -139,11 +139,6 @@ namespace DentyEngine
 		if (isBuildInComponent)
 		{
 			_selectedGameObject->AddBuildInComponent(componentName);
-		}
-		// Mono component.
-		else
-		{
-			_selectedGameObject->AddMonoComponent(componentName);
 		}
 	}
 

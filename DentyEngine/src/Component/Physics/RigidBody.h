@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #include "Component/ComponentGenerator.h"
-#include "Component/PhysicsBehaviour.h"
+#include "Component/PhysicsBehavior.h"
 #include "Component/Transform.h"
 
 #include "Physics/Shapes/BoxShape.h"
@@ -23,7 +23,7 @@ namespace DentyEngine
 
 	class EventOnScenePlayButtonPressed;
 
-	class RigidBody final : public PhysicsBehaviour, public std::enable_shared_from_this<RigidBody>
+	class RigidBody final : public PhysicsBehavior, public std::enable_shared_from_this<RigidBody>
 	{
 	public:
 		RigidBody();
@@ -165,7 +165,7 @@ namespace DentyEngine
 			if (version <= 1u)
 			{
 				archive(
-					cereal::base_class<PhysicsBehaviour>(this),
+					cereal::base_class<PhysicsBehavior>(this),
 					CEREAL_NVP(_boxShape),
 					CEREAL_NVP(_sphereShape),
 					CEREAL_NVP(_capsuleShape),
@@ -187,7 +187,7 @@ namespace DentyEngine
 			if (version <= 1u)
 			{
 				archive(
-					cereal::base_class<PhysicsBehaviour>(this),
+					cereal::base_class<PhysicsBehavior>(this),
 					CEREAL_NVP(_boxShape),
 					CEREAL_NVP(_sphereShape),
 					CEREAL_NVP(_capsuleShape),

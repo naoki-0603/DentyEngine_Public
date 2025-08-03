@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "Event.h"
 
@@ -12,7 +12,7 @@ namespace DentyEngine
 	class GameObject;
 
 	class Component;
-	class MonoBehaviour;
+	class MonoBehavior;
 
 	class EventOnSceneCreated final : public Event
 	{

@@ -1,6 +1,6 @@
-#pragma once
+﻿#pragma once
 
-#include "Component/Behaviour.h"
+#include "Component/Behavior.h"
 #include "Component/ComponentGenerator.h"
 
 #include "UI/Items/Text.h"
@@ -49,7 +49,7 @@ namespace DentyEngine
 		}
 	};
 
-	class UIComponent final : public Behaviour, public std::enable_shared_from_this<UIComponent>
+	class UIComponent final : public Behavior, public std::enable_shared_from_this<UIComponent>
 	{
 	public:
 		UIComponent();
@@ -99,7 +99,7 @@ namespace DentyEngine
 			if (version <= 1u)
 			{
 				archive(
-					cereal::base_class<Behaviour>(this),
+					cereal::base_class<Behavior>(this),
 					CEREAL_NVP(_item)
 				);
 			}
@@ -111,7 +111,7 @@ namespace DentyEngine
 			if (version <= 1u)
 			{
 				archive(
-					cereal::base_class<Behaviour>(this),
+					cereal::base_class<Behavior>(this),
 					CEREAL_NVP(_item)
 				);
 			}

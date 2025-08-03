@@ -1,6 +1,6 @@
-#pragma once
+﻿#pragma once
 
-#include "Component/Behaviour.h"
+#include "Component/Behavior.h"
 #include "Component/ComponentGenerator.h"
 
 #include "Graphics/Renderer/Camera.h"
@@ -15,7 +15,7 @@ namespace DentyEngine
 	class EventOnSceneActivated;
 	class EventOnSceneDeActivated;
 
-	class GameCamera final : public Camera, public Behaviour, public std::enable_shared_from_this<GameCamera>
+	class GameCamera final : public Camera, public Behavior, public std::enable_shared_from_this<GameCamera>
 	{
 	public:
 		GameCamera();

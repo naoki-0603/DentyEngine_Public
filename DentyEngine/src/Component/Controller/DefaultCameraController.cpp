@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "DefaultCameraController.h"
 
@@ -18,7 +18,7 @@
 namespace DentyEngine
 {
 	DefaultCameraController::DefaultCameraController() :
-		Behaviour(), _targetGameObject(), _gameCamera(), _vehicleComponent(),
+		Behavior(), _targetGameObject(), _gameCamera(), _vehicleComponent(),
 		_targetID(), _offset(), _height(5.0f), _previousHeight(), _distance(10.0f)
 	{
 		_name = "DefaultCameraController";
@@ -28,19 +28,19 @@ namespace DentyEngine
 	}
 
 	DefaultCameraController::DefaultCameraController(const DefaultCameraController& source) :
-		Behaviour(source), _targetGameObject(), _gameCamera(), _vehicleComponent(), _targetID(source._targetID),
+		Behavior(source), _targetGameObject(), _gameCamera(), _vehicleComponent(), _targetID(source._targetID),
 		_offset(source._offset), _height(source._height), _distance(source._distance)
 	{
 	}
 
 	void DefaultCameraController::Awake()
 	{
-		Behaviour::Awake();
+		Behavior::Awake();
 	}
 
 	void DefaultCameraController::Start()
 	{
-		Behaviour::Start();
+		Behavior::Start();
 	}
 
 	void DefaultCameraController::OnUpdate([[maybe_unused]] float deltaTime)
@@ -53,14 +53,14 @@ namespace DentyEngine
 
 	void DefaultCameraController::OnFixedUpdate()
 	{
-		Behaviour::OnFixedUpdate();
+		Behavior::OnFixedUpdate();
 
 		UpdateCameraTransform();
 	}
 
 	void DefaultCameraController::OnGui()
 	{
-		Behaviour::OnGui();
+		Behavior::OnGui();
 
 		if (ImGui::CollapsingHeader("CameraStatus##DefaultCameraController", ImGuiTreeNodeFlags_DefaultOpen))
 		{
@@ -111,32 +111,32 @@ namespace DentyEngine
 
 	void DefaultCameraController::OnPrefabGui()
 	{
-		Behaviour::OnPrefabGui();
+		Behavior::OnPrefabGui();
 	}
 
 	void DefaultCameraController::OnEvent(Event* e)
 	{
-		Behaviour::OnEvent(e);
+		Behavior::OnEvent(e);
 	}
 
 	void DefaultCameraController::OnSerialized() const
 	{
-		Behaviour::OnSerialized();
+		Behavior::OnSerialized();
 	}
 
 	void DefaultCameraController::OnDeserialized()
 	{
-		Behaviour::OnDeserialized();
+		Behavior::OnDeserialized();
 	}
 
 	void DefaultCameraController::OnDestroy()
 	{
-		Behaviour::OnDestroy();
+		Behavior::OnDestroy();
 	}
 
 	void DefaultCameraController::OnGameObjectDeserialized()
 	{
-		Behaviour::OnGameObjectDeserialized();
+		Behavior::OnGameObjectDeserialized();
 	}
 
 	void DefaultCameraController::OnSceneActivated()

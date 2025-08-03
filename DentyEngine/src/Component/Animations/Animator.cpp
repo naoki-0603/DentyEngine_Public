@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 
 #include "Animator.h"
 
@@ -7,25 +7,25 @@
 namespace DentyEngine
 {
 	Animator::Animator() :
-		Behaviour(), _controller(), _speed(1.0f)
+		Behavior(), _controller(), _speed(1.0f)
 	{
 		_name = "Animator";
 	}
 
 	Animator::Animator(const Animator& source) :
-		Behaviour(source),
+		Behavior(source),
 		_speed(source._speed)
 	{
 	}
 
 	void Animator::Awake()
 	{
-		Behaviour::Awake();
+		Behavior::Awake();
 	}
 
 	void Animator::Start()
 	{
-		Behaviour::Start();
+		Behavior::Start();
 	}
 
 	void Animator::OnUpdate([[maybe_unused]] float deltaTime)
@@ -35,17 +35,17 @@ namespace DentyEngine
 
 	void Animator::OnFixedUpdate()
 	{
-		Behaviour::OnFixedUpdate();
+		Behavior::OnFixedUpdate();
 	}
 
 	void Animator::OnGui()
 	{
-		Behaviour::OnGui();
+		Behavior::OnGui();
 	}
 
 	void Animator::OnPrefabGui()
 	{
-		Behaviour::OnGui();
+		Behavior::OnGui();
 
 		// Drag and drop
 		{
@@ -78,32 +78,32 @@ namespace DentyEngine
 
 	void Animator::OnEvent(Event* e)
 	{
-		Behaviour::OnEvent(e);
+		Behavior::OnEvent(e);
 	}
 
 	void Animator::OnSerialized() const
 	{
-		Behaviour::OnSerialized();
+		Behavior::OnSerialized();
 	}
 
 	void Animator::OnDeserialized()
 	{
-		Behaviour::OnDeserialized();
+		Behavior::OnDeserialized();
 	}
 
 	void Animator::Destroy()
 	{
-		Behaviour::Destroy();
+		Behavior::Destroy();
 	}
 
 	void Animator::OnDestroy()
 	{
-		Behaviour::OnDestroy();
+		Behavior::OnDestroy();
 	}
 
 	void Animator::OnGameObjectDeserialized()
 	{
-		Behaviour::OnGameObjectDeserialized();
+		Behavior::OnGameObjectDeserialized();
 	}
 
 	Ref<Object> Animator::MakeCopy() const

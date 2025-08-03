@@ -7,3 +7,12 @@ D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\obj\Debug\Sc
 D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\obj\Debug\ScriptApp.csproj.Up2Date
 D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\obj\Debug\ScriptApp.dll
 D:\Programming\Game\Git\DentyEngine\DentyEngine-ScriptApp\ScriptApp\obj\Debug\ScriptApp.pdb
+D:\Programming\Game\Git\DentyEngine_Public\DentyEngine-ScriptApp\ScriptApp\bin\Debug\ScriptApp.dll
+D:\Programming\Game\Git\DentyEngine_Public\DentyEngine-ScriptApp\ScriptApp\bin\Debug\ScriptApp.pdb
+D:\Programming\Game\Git\DentyEngine_Public\DentyEngine-ScriptApp\ScriptApp\bin\Debug\ScriptCore.dll
+D:\Programming\Game\Git\DentyEngine_Public\DentyEngine-ScriptApp\ScriptApp\bin\Debug\ScriptCore.pdb
+D:\Programming\Game\Git\DentyEngine_Public\DentyEngine-ScriptApp\ScriptApp\obj\Debug\ScriptApp.csproj.AssemblyReference.cache
+D:\Programming\Game\Git\DentyEngine_Public\DentyEngine-ScriptApp\ScriptApp\obj\Debug\ScriptApp.csproj.CoreCompileInputs.cache
+D:\Programming\Game\Git\DentyEngine_Public\DentyEngine-ScriptApp\ScriptApp\obj\Debug\ScriptApp.csproj.Up2Date
+D:\Programming\Game\Git\DentyEngine_Public\DentyEngine-ScriptApp\ScriptApp\obj\Debug\ScriptApp.dll
+D:\Programming\Game\Git\DentyEngine_Public\DentyEngine-ScriptApp\ScriptApp\obj\Debug\ScriptApp.pdb
